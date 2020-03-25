@@ -5,7 +5,7 @@ import (
 
 	loggingC "github.com/codemodify/SystemKit/Logging/Contracts"
 
-	helpersConfig "github.com/codemodify/SystemKit/Config"
+	helpersConfig "github.com/codemodify/systemkit-config"
 )
 
 type AppConfig struct {

@@ -1,4 +1,4 @@
-package Config
+package config
 
 import (
 	"encoding/json"
@@ -43,9 +43,11 @@ func LoadConfig(config Config) Config {
 	return configInstance
 }
 
-type ConfigChangedEventHandler func(config Config)
+// ChangedEventHandler -
+type ChangedEventHandler func(config Config)
 
-func OnConfigChanged(configChangedEventHandler ConfigChangedEventHandler) {
+// OnConfigChanged -
+func OnConfigChanged(configChangedEventHandler ChangedEventHandler) {
 	helpersFile.WatchFile(GetConfigFile(), func() {
 		configChangedEventHandler(LoadConfig(configInstance))
 	})

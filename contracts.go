@@ -1,4 +1,4 @@
-package Config
+package config
 
 // Config -
 type Config interface {
