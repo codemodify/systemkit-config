@@ -3,7 +3,7 @@ package tests
 import (
 	"encoding/json"
 
-	loggingC "github.com/codemodify/SystemKit/Logging/Contracts"
+	loggingC "github.com/codemodify/systemkit-logging/contracts"
 
 	helpersConfig "github.com/codemodify/systemkit-config"
 )
@@ -18,7 +18,7 @@ type Service struct {
 	Listen string `json:"listen"`
 }
 
-// Implement interfaces from `github.com/codemodify/SystemKit/Config/contracts.go`
+// Implement interfaces from `github.com/codemodify/systemkit-logging/Config/contracts.go`
 
 func (thisRef *AppConfig) CreateOrReturnInstance() helpersConfig.Config {
 	return helpersConfig.LoadConfig(&AppConfig{})

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	logging "github.com/codemodify/SystemKit/Logging"
+	logging "github.com/codemodify/systemkit-logging"
 )
 
 func Test_LoadConfig(t *testing.T) {
