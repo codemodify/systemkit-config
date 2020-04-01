@@ -1,9 +1,20 @@
-# ![](https://fonts.gstatic.com/s/i/materialicons/bookmarks/v4/24px.svg) Config
-[![GoDoc](https://godoc.org/github.com/codemodify/systemkit-logging?status.svg)](https://godoc.org/github.com/codemodify/systemkit-logging)
-[![0-License](https://img.shields.io/badge/license-0--license-brightgreen)](https://github.com/codemodify/TheFreeLicense)
-[![Go Report Card](https://goreportcard.com/badge/github.com/codemodify/systemkit-logging)](https://goreportcard.com/report/github.com/codemodify/systemkit-logging)
-[![Test Status](https://github.com/danawoodman/systemservice/workflows/Test/badge.svg)](https://github.com/danawoodman/systemservice/actions)
-![code size](https://img.shields.io/github/languages/code-size/codemodify/systemkit-config?style=flat-square)
+# ![](https://fonts.gstatic.com/s/i/materialicons/bookmarks/v4/24px.svg) Flexible config framework for your Go app
+[![](https://img.shields.io/github/v/release/codemodify/systemkit-config?style=flat-square)](https://github.com/codemodify/systemkit-config/releases/latest)
+![](https://img.shields.io/github/languages/code-size/codemodify/systemkit-config?style=flat-square)
+![](https://img.shields.io/github/last-commit/codemodify/systemkit-config?style=flat-square)
+[![](https://img.shields.io/badge/license-0--license-brightgreen?style=flat-square)](https://github.com/codemodify/TheFreeLicense)
 
-Flexible config framework for your app.
-See tests for examples
+![](https://img.shields.io/github/workflow/status/codemodify/systemkit-config/qa?style=flat-square)
+![](https://img.shields.io/github/issues/codemodify/systemkit-config?style=flat-square)
+[![](https://goreportcard.com/badge/github.com/codemodify/systemkit-config?style=flat-square)](https://goreportcard.com/report/github.com/codemodify/systemkit-config)
+
+[![](https://img.shields.io/badge/godoc-reference-brightgreen?style=flat-square)](https://godoc.org/github.com/codemodify/systemkit-config)
+![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
+![](https://img.shields.io/gitter/room/codemodify/systemkit-config?style=flat-square)
+
+![](https://img.shields.io/github/contributors/codemodify/systemkit-config?style=flat-square)
+![](https://img.shields.io/github/stars/codemodify/systemkit-config?style=flat-square)
+![](https://img.shields.io/github/watchers/codemodify/systemkit-config?style=flat-square)
+![](https://img.shields.io/github/forks/codemodify/systemkit-config?style=flat-square)
+
+### See tests for examples
