@@ -3,13 +3,9 @@ package tests
 import (
 	"fmt"
 	"testing"
-
-	logging "github.com/codemodify/systemkit-logging"
 )
 
 func Test_LoadConfig(t *testing.T) {
-	logging.Init(logging.NewConsoleLogger())
-
 	config := getConfig()
 
 	t.Log(config)

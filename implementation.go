@@ -6,11 +6,9 @@ import (
 	"io/ioutil"
 	"os"
 
+	files "github.com/codemodify/systemkit-helpers-files"
+	reflection "github.com/codemodify/systemkit-helpers-reflection"
 	logging "github.com/codemodify/systemkit-logging"
-	loggingC "github.com/codemodify/systemkit-logging/contracts"
-
-	helpersFile "github.com/codemodify/systemkit-helpers"
-	helpersReflect "github.com/codemodify/systemkit-helpers"
 )
 
 var configInstance Config
@@ -20,20 +18,14 @@ func LoadConfig(config Config) Config {
 	configInstance = config.DefaultConfig()
 
 	var configFileName = GetConfigFile()
-	if helpersFile.FileOrFolderExists(configFileName) {
+	if files.FileOrFolderExists(configFileName) {
 		file, err := ioutil.ReadFile(configFileName)
 		if err != nil {
-			logging.Instance().LogWarningWithFields(loggingC.Fields{
-				"method": helpersReflect.GetThisFuncName(),
-				"error":  fmt.Sprintf("unable to load config file %s, using default", configFileName),
-			})
+			logging.Instance().Warningf("%s from %", fmt.Sprintf("unable to load config file %s, using default", configFileName), reflection.GetThisFuncName())
 		} else {
 			err := json.Unmarshal(file, configInstance)
 			if err != nil {
-				logging.Instance().LogWarningWithFields(loggingC.Fields{
-					"method": helpersReflect.GetThisFuncName(),
-					"error":  fmt.Sprintf("unable to load config file %s, using default", configFileName),
-				})
+				logging.Instance().Warningf("%s from %", fmt.Sprintf("unable to load config file %s, using default", configFileName), reflection.GetThisFuncName())
 
 				configInstance = config.DefaultConfig()
 			}
@@ -48,7 +40,7 @@ type ChangedEventHandler func(config Config)
 
 // OnConfigChanged -
 func OnConfigChanged(configChangedEventHandler ChangedEventHandler) {
-	helpersFile.WatchFile(GetConfigFile(), func() {
+	files.WatchFile(GetConfigFile(), func() {
 		configChangedEventHandler(LoadConfig(configInstance))
 	})
 }
@@ -61,13 +53,10 @@ func SaveConfig(config Config) error {
 // GetConfigDir -
 func GetConfigDir() string {
 	directoryName := "." + string(os.PathSeparator) + "config"
-	if !helpersFile.FileOrFolderExists(directoryName) {
+	if !files.FileOrFolderExists(directoryName) {
 		err := os.MkdirAll(directoryName, 0755)
 		if err != nil {
-			logging.Instance().LogFatalWithFields(loggingC.Fields{
-				"method": helpersReflect.GetThisFuncName(),
-				"error":  fmt.Sprintf("unable to create directory %s", directoryName),
-			})
+			logging.Instance().Fatalf("%s from %", fmt.Sprintf("unable to create directory %s", directoryName), reflection.GetThisFuncName())
 
 			panic(err)
 		}

@@ -3,9 +3,8 @@ package tests
 import (
 	"encoding/json"
 
-	loggingC "github.com/codemodify/systemkit-logging/contracts"
-
-	helpersConfig "github.com/codemodify/systemkit-config"
+	config "github.com/codemodify/systemkit-config"
+	logging "github.com/codemodify/systemkit-logging"
 )
 
 type AppConfig struct {
@@ -20,13 +19,13 @@ type Service struct {
 
 // Implement interfaces from `github.com/codemodify/systemkit-logging/Config/contracts.go`
 
-func (thisRef *AppConfig) CreateOrReturnInstance() helpersConfig.Config {
-	return helpersConfig.LoadConfig(&AppConfig{})
+func (thisRef *AppConfig) CreateOrReturnInstance() config.Config {
+	return config.LoadConfig(&AppConfig{})
 }
 
-func (thisRef *AppConfig) DefaultConfig() helpersConfig.Config {
+func (thisRef *AppConfig) DefaultConfig() config.Config {
 	return &AppConfig{
-		LogLevel: int(loggingC.TypeInfo),
+		LogLevel: int(logging.TypeInfo),
 		APIKey:   "",
 		Services: []Service{},
 	}
