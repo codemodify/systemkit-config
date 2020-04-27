@@ -21,11 +21,11 @@ func LoadConfig(config Config) Config {
 	if files.FileOrFolderExists(configFileName) {
 		file, err := ioutil.ReadFile(configFileName)
 		if err != nil {
-			logging.Instance().Warningf("%s from %", fmt.Sprintf("unable to load config file %s, using default", configFileName), reflection.GetThisFuncName())
+			logging.Warningf("%s from %", fmt.Sprintf("unable to load config file %s, using default", configFileName), reflection.GetThisFuncName())
 		} else {
 			err := json.Unmarshal(file, configInstance)
 			if err != nil {
-				logging.Instance().Warningf("%s from %", fmt.Sprintf("unable to load config file %s, using default", configFileName), reflection.GetThisFuncName())
+				logging.Warningf("%s from %", fmt.Sprintf("unable to load config file %s, using default", configFileName), reflection.GetThisFuncName())
 
 				configInstance = config.DefaultConfig()
 			}
@@ -56,7 +56,7 @@ func GetConfigDir() string {
 	if !files.FileOrFolderExists(directoryName) {
 		err := os.MkdirAll(directoryName, 0755)
 		if err != nil {
-			logging.Instance().Fatalf("%s from %", fmt.Sprintf("unable to create directory %s", directoryName), reflection.GetThisFuncName())
+			logging.Fatalf("%s from %", fmt.Sprintf("unable to create directory %s", directoryName), reflection.GetThisFuncName())
 
 			panic(err)
 		}
