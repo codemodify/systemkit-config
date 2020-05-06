@@ -2,8 +2,8 @@ github.com/codemodify/systemkit-helpers-files v1.7.9 h1:Dx3eYA0SlN2WHmfoaqt4l3Jb
 github.com/codemodify/systemkit-helpers-files v1.7.9/go.mod h1:SW9fzAddqJChY39y+yTxzMUqWBzqjtkAmwFrQXoL4Xc=
 github.com/codemodify/systemkit-helpers-reflection v1.7.9 h1:vPsYvbOiEZHT+rpoXlRx14IvzsKEAkYy7Aw2QEjF/G0=
 github.com/codemodify/systemkit-helpers-reflection v1.7.9/go.mod h1:HunZSrygIcl5IBmnWAYoDoqvFRVu7GIUvC0/scCfPzY=
-github.com/codemodify/systemkit-logging v1.8.2 h1:mLirYlQSczNJVh61/Q300AsRJfzmGzqG+sydPxFtCU4=
-github.com/codemodify/systemkit-logging v1.8.2/go.mod h1:29Zc9P/MnY2bgenJU9aoDszUef+Xf40b3ajtusTBC1Q=
+github.com/codemodify/systemkit-logging v1.8.4 h1:nkbj0VpnRnpI4PE4w9HNUv/ySO3A/1Y9LVeT9j+ZvGM=
+github.com/codemodify/systemkit-logging v1.8.4/go.mod h1:29Zc9P/MnY2bgenJU9aoDszUef+Xf40b3ajtusTBC1Q=
 github.com/fsnotify/fsnotify v1.4.9 h1:hsms1Qyu0jgnwNXIxa+/V/PDsU6CfLf6CNO8H7IWoS4=
 github.com/fsnotify/fsnotify v1.4.9/go.mod h1:znqG4EE+3YCdAaPaxE2ZRY/06pZUdp0tY4IgpuI1SZQ=
 golang.org/x/sys v0.0.0-20191005200804-aed5e4c7ecf9/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
