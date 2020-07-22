@@ -1,4 +1,4 @@
-# ![](https://fonts.gstatic.com/s/i/materialicons/bookmarks/v4/24px.svg) Flexible config framework for your Go app
+# ![](https://fonts.gstatic.com/s/i/materialiconsoutlined/flare/v4/24px.svg) Flexible config framework for your Go app
 [![](https://img.shields.io/github/v/release/codemodify/systemkit-config?style=flat-square)](https://github.com/codemodify/systemkit-config/releases/latest)
 ![](https://img.shields.io/github/languages/code-size/codemodify/systemkit-config?style=flat-square)
 ![](https://img.shields.io/github/last-commit/codemodify/systemkit-config?style=flat-square)
