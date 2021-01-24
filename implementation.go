@@ -2,12 +2,10 @@ package config
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"os"
 
 	files "github.com/codemodify/systemkit-helpers-files"
-	reflection "github.com/codemodify/systemkit-helpers-reflection"
 	logging "github.com/codemodify/systemkit-logging"
 )
 
@@ -21,11 +19,11 @@ func LoadConfig(config Config) Config {
 	if files.FileOrFolderExists(configFileName) {
 		file, err := ioutil.ReadFile(configFileName)
 		if err != nil {
-			logging.Warningf("%s from %", fmt.Sprintf("unable to load config file %s, using default", configFileName), reflection.GetThisFuncName())
+			logging.Warningf("unable to load config file %s, using default", configFileName)
 		} else {
 			err := json.Unmarshal(file, configInstance)
 			if err != nil {
-				logging.Warningf("%s from %", fmt.Sprintf("unable to load config file %s, using default", configFileName), reflection.GetThisFuncName())
+				logging.Warningf("unable to load config file %s, using default", configFileName)
 
 				configInstance = config.DefaultConfig()
 			}
@@ -56,7 +54,7 @@ func GetConfigDir() string {
 	if !files.FileOrFolderExists(directoryName) {
 		err := os.MkdirAll(directoryName, 0755)
 		if err != nil {
-			logging.Fatalf("%s from %", fmt.Sprintf("unable to create directory %s", directoryName), reflection.GetThisFuncName())
+			logging.Fatalf("unable to create directory %s", directoryName)
 
 			panic(err)
 		}
